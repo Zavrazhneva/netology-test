@@ -10,50 +10,48 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 </head>
 <body>
-
-    <div class="container">
+<div class="container">
         <div class="container__left">
-
+            <h2 class="form__title">Заявка на экскурсионный полет на Марс</h2>
             <div class="form__wrp ">
-                <h2 class="form__title">Заявка на экскурсионный полет на Марс</h2>
-                <div >
-                    <form action="" class="form" id="gform-jquery">
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSfAqJatQbE-m_7dwPQPq-KnflT5yXBvoSdZP869DffZ7y4FKA/formResponse" class="form"
+                          method="POST">
                         <div class="form__top shadow">
                             <fieldset class="form__group">
                                 <div class="form__wrapper">
                                     <div class="form__attribute">
-                                        <label class="form__label" for="name">Фамилия</label>
+                                        <label class="form__label" for="surname">Фамилия</label>
                                     </div>
                                     <div class="form__value">
-                                        <input class="form__input" name="name" type="text" id="name" onkeyup="translit()"/>
+                                        <input data-validation="required" class="form__input"  name="entry.299335418" type="text" id="surname" />
                                         <div class="old-surname">
-                                            <input id="previouslyChanged" class="" name="name" type="checkbox"/>
+                                            <input id="previouslyChanged" class="form__input--checkbox" data-no-validate name="test" type="checkbox"/>
                                             <label for="previouslyChanged">Ранее менялась</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form__wrapper form__attribute--hidden" id="oldSurnameBlock">
                                     <div class="form__attribute">
-                                        <label class="form__label" for="old-surname">Прежняя фамилия</label>
+                                        <label class="form__label" for="oldSurname">Прежняя фамилия</label>
                                     </div>
                                     <div class="form__value">
-                                        <input class="form__input" name="old-surname" type="text"  id=""/>
+                                        <input class="form__input" data-no-validate name="entry.92752461" type="text"  id="oldSurname"/>
                                     </div>
                                 </div>
                                 <div class="form__wrapper">
                                     <div class="form__attribute">
-                                        <label class="form__label req" for="">Имя</label>
+                                        <label class="form__label req" for="name">Имя</label>
                                     </div>
                                     <div class="form__value">
-                                        <input class="form__input" name="entry.314929955" type="text">
+                                        <input data-validation="required" class="form__input" name="entry.314929955" type="text" id="name">
                                     </div>
                                 </div>
                                 <div class="form__wrapper">
                                     <div class="form__attribute">
-                                        <label class="form__label" for="">Отчество</label>
+                                        <label class="form__label" for="patronym">Отчество</label>
                                     </div>
                                     <div class="form__value">
-                                        <input class="form__input" type="text" name="entry.1650985685">
+                                        <input data-validation="required" class="form__input" id="patronym" type="text" name="entry.1650985685">
                                         <div class="form__value-wrap">
                                             <div class="shadow__effect-bottom"></div>
                                             <div class="form__description form__large-block">
@@ -67,18 +65,18 @@
                             <fieldset class="form__group">
                                 <div class="form__wrapper">
                                     <div class="form__attribute">
-                                        <label class="form__label" for="old-surname">Фамилия латиницей</label>
+                                        <label class="form__label" for="translitSurname">Фамилия латиницей</label>
                                     </div>
                                     <div class="form__value">
-                                        <input class="form__input" name="old-surname" type="text" id="old-surname" name="entry.1799407598" onkeyup="translit()"/>
+                                        <input data-validation="required" class="form__input" type="text" id="translitSurname" name="entry.1799407598"/>
                                     </div>
                                 </div>
                                 <div class="form__wrapper">
                                     <div class="form__attribute">
-                                        <label class="form__label" for="">Имя латиницей</label>
+                                        <label class="form__label" for="translitName">Имя латиницей</label>
                                     </div>
                                     <div class="form__value">
-                                        <input class="form__input" type="text" name="entry.1782858165">
+                                        <input data-validation="required" class="form__input" type="text" name="entry.1782858165" id="translitName">
                                     </div>
                                 </div>
                             </fieldset>
@@ -89,13 +87,13 @@
                                     </div>
                                     <div class="form__value">
                                         <div class="form__date-selects form__date-selects--yellow background" id="dateBlock">
-                                            <select name="" id="daySelect">
+                                            <select data-validation="required" name="entry.885983370" id="daySelect">
                                                 <option value=""></option>
                                             </select >
-                                            <select id="monthSelect">
+                                            <select data-validation="required" name="entry.692041400" id="monthSelect">
                                                 <option value=""></option>
                                             </select>
-                                            <select id="yearSelect">
+                                            <select data-validation="required" name="entry.478368344" id="yearSelect">
                                                 <option value=""></option>
                                             </select>
                                         </div>
@@ -117,12 +115,12 @@
                                     <div class="form__value">
                                         <div class="radio-button">
                                             <div class="radio-button__item">
-                                                <input class="radio-button__input" type="radio" name="option" id="male"/>
+                                                <input data-validation="required" class="radio-button__input" type="radio" name="entry.145615335" id="male" value="male" checked/>
                                                 <label class="radio-button__label" for="male">Мужской</label>
                                             </div>
 
                                             <div class="radio-button__item">
-                                                <input class="radio-button__input" type="radio" name="option" id="female"/>
+                                                <input data-validation="required" class="radio-button__input" type="radio" name="entry.145615335" id="female" value="female"/>
                                                 <label class="radio-button__label" for="female">Женский</label>
                                             </div>
                                         </div>
@@ -135,13 +133,13 @@
                                         <label for="" class="form__label">Семейное положение</label>
                                     </div>
                                     <div class="form__value">
-                                        <select name="">
+                                        <select data-validation="required" name="entry.5425600">
                                             <option value=""></option>
-                                            <option value="">женат</option>
-                                            <option value="">в "гражданском браке"</option>
-                                            <option value="">разведен</option>
-                                            <option value="">холост</option>
-                                            <option value="">вдовец</option>
+                                            <option value="Женат">женат</option>
+                                            <option value="В гражданском браке">в "гражданском браке"</option>
+                                            <option value="Разведен">разведен</option>
+                                            <option value="Холост">холост</option>
+                                            <option value="Вдовец">вдовец</option>
                                         </select>
                                     </div>
                                 </div>
@@ -152,12 +150,12 @@
                                         <label for="" class="form__label">Образование</label>
                                     </div>
                                     <div class="form__value">
-                                        <select name="">
+                                        <select data-validation="required" name="entry.686422984">
                                             <option value=""></option>
-                                            <option value="">высшее</option>
-                                            <option value="">среднее специальное</option>
-                                            <option value="">среднее</option>
-                                            <option value="">студент</option>
+                                            <option value="Высшее">высшее</option>
+                                            <option value="Среднее специальное">среднее специальное</option>
+                                            <option value="Среднее">среднее</option>
+                                            <option value="Студент">студент</option>
                                         </select>
                                     </div>
                                 </div>
@@ -169,8 +167,7 @@
                                     </div>
                                     <div class="form__value">
                                         <h3 class="contact__title">Контактная информация</h3>
-                                        <input class="form__input" type="text" id="phone" placeholder="+7"
-                                               pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
+                                        <input data-validation="required" class="form__input" type="text" id="phone" placeholder="+7" name="entry.45250479">
                                     </div>
                                 </div>
                                 <div class="form__wrapper contact__wrapper ">
@@ -178,7 +175,7 @@
                                         <label class="form__label" for="">Электронная почта</label>
                                     </div>
                                     <div class="form__value">
-                                        <input class="form__input" type="email" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                                        <input data-validation="required" class="form__input" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" name="entry.368495026">
                                     </div>
                                 </div>
                             </fieldset>
@@ -189,18 +186,19 @@
                                     <div class="form__attribute">
                                     </div>
                                     <div class="form__value">
-                                        <div>
-                                            <input type="checkbox">
-                                            <label for="">Ставя эту галочку, я подтверждаю, что поставил её в трезвом уме и твердой памяти.</label>
+                                        <div class="form__label">
+                                            <input data-validation="required" class="form__input--checkbox" type="checkbox" name="entry.890015802">
+                                            <label class="" for="">Ставя эту галочку, я подтверждаю, что поставил её в&nbsp;трезвом уме и твердой памяти.</label>
                                         </div>
-                                        <button class="button" type="submit">Полететь на Марс</button>
+                                        <button class="button" type="submit">
+                                            <span class="button__title">Полететь на Марс</span>
+                                        </button>
                                     </div>
 
                                 </div>
                             </fieldset>
                         </div>
                     </form>
-                </div>
             </div>
         </div>
         <div class="container__right">
@@ -208,11 +206,8 @@
             <p class="container__subtitle">Эффективный диаметр жизненно вызывает случайный эффективный радиус,
                 а время ожидания ответа составило бы 80 миллиардов лет.</p>
         </div>
-
-</div>
-
-
+    </div>
 <script src="scripts/app.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 </body>
 </html>

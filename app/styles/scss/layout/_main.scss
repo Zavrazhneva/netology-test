@@ -4,17 +4,17 @@ body {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 h3 {
-    font-size: 24px;
+    font-size: $font-big;
     font-weight: bold;
 
 }
 input, select {
-   height: 25px;
+
     &:active, &:hover, &:focus {
         outline: 0;
         outline-offset: 0;
@@ -22,6 +22,10 @@ input, select {
     &:invalid {
         color: red;
     }
+}
+select {
+    height: 25px;
+
 }
 ::-webkit-input-placeholder {color:#000000;opacity: 0.3;font-size:18px}
 ::-moz-placeholder          {color:#000000;opacity: 0.3;font-size: 18px}/* Firefox 19+ */
