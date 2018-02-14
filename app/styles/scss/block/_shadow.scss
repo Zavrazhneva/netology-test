@@ -1,0 +1,38 @@
+.shadow {
+    &:before, &:after {
+        z-index: -2;
+        position: absolute;
+        content: "";
+        bottom:20%;
+        left: 5px;
+        width: 100%;
+        top: 20px;
+        max-width:300px;
+        background: linear-gradient(to bottom, #ffdddc,#5D3232,#000000,#000000);
+        filter: blur(2px);
+        box-shadow: -3px 10px 5px  rgba(255,221,220,0.5);
+        opacity: 0.5;
+        transform: rotate(-4deg);
+    }
+    &:after {
+        box-shadow: 3px 10px 5px  rgba(255,221,220,0.5);
+        transform: rotate(4deg);
+        right: 5px;
+        left: auto;
+    }
+    &__effect-bottom  {
+        content:"";
+        position:absolute;
+        box-shadow:0 0 20px rgba(0,0,0,0.8);
+        top:50%;
+        bottom:0;
+        left:10px;
+        right:10px;
+        border-radius:100px / 10px;
+        width: 80%;
+        margin-left: -10px;
+    }
+}
+
+
+

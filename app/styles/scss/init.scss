@@ -7,5 +7,14 @@
 //global things
 @import 'general/_reset';
 @import 'layout/_main';
+@import 'layout/_variables';
+
 
 //pages
+
+@import 'block/form';
+@import 'block/shadow';
+@import 'block/radio-button';
+@import 'block/contact';
+@import 'block/button';
+@import 'block/container';
