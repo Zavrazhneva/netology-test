@@ -1,23 +1,41 @@
 .container {
 
-    font-family: 'Open Sans', sans-serif;
+    &__wrapper {
+        max-width: 1140px;
+        min-width: 350px;
+        margin:auto;
+        padding: 50px;
+        box-sizing: border-box;
+        @media (max-width: 500px) {
+            padding: 5px;
+        }
+    }
     font-size: 14px;
     font-weight: 600;
     display: flex;
-    @media (max-width: 500px) {
-        display: block;
+    @media (max-width: 800px) {
+        flex-direction: column;
         margin: auto;
     }
     &__left {
         width: 75%;
+        @media (max-width: 800px) {
+            width: 100%;
+            order: 2;
+        }
     }
     &__right {
         width: 25%;
-        margin-left: 50px;
+        padding-left: 50px;
+        box-sizing: border-box;
+        @media (max-width: 800px) {
+            width: 100%;
+            padding-left: 0;
+            order: 1;
+            padding-bottom: 20px;
+        }
+        &-title {
+            font-size: 18px;
+        }
     }
-    &__title {
-        font-size: 18px;
-        margin-top: 60px;
-    }
-
 }

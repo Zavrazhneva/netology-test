@@ -13,12 +13,18 @@
         box-shadow: -3px 10px 5px  rgba(255,221,220,0.5);
         opacity: 0.5;
         transform: rotate(-4deg);
+        @media (max-width: 500px) {
+            display: none;
+        }
     }
     &:after {
         box-shadow: 3px 10px 5px  rgba(255,221,220,0.5);
         transform: rotate(4deg);
         right: 5px;
         left: auto;
+        @media (max-width: 500px) {
+            display: none;
+        }
     }
     &__effect-bottom  {
         content:"";
@@ -31,6 +37,10 @@
         border-radius:100px / 10px;
         width: 70%;
         margin-left: -10px;
+        @media (max-width: 650px) {
+            width: 90%;
+            left:20px;
+        }
     }
 }
 
