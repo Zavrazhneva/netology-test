@@ -1,5 +1,6 @@
 body {
     max-width: 1140px;
+    min-width: 300px;
     margin:100px auto;
 }
 
@@ -14,12 +15,12 @@ h3 {
 
 }
 input, select {
-
+    border: 1px solid $grey;
     &:active, &:hover, &:focus {
         outline: 0;
         outline-offset: 0;
     }
-    &:invalid {
+    &#email:invalid {
         color: red;
     }
 }

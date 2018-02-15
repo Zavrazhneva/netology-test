@@ -4,6 +4,10 @@
     font-size: 14px;
     font-weight: 600;
     display: flex;
+    @media (max-width: 500px) {
+        display: block;
+        margin: auto;
+    }
     &__left {
         width: 75%;
     }

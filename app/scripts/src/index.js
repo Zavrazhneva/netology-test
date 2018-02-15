@@ -14,7 +14,6 @@ $(document).ready(function () {
     }
     previouslyChanged.change(onChange);
 
-
     // выпадающее меню даты
     var daySelect = $('#daySelect');
     var monthSelect = $('#monthSelect');
@@ -32,7 +31,6 @@ $(document).ready(function () {
         monthSelect.append('<option value="' + item + '">' + item + '</option>');
     });
 
-
     //проверка , что пользователю больше 90 лет
     var currentYear = (new Date()).getFullYear();
     var yearsOld = $('#bigAge');
@@ -44,6 +42,26 @@ $(document).ready(function () {
             yearsOld.hide();
             $('#dateBlock').addClass('form__date-selects--yellow');
         }
+    });
+
+    // валидация формы
+    $("#form").validate({
+        showErrors: function () {
+            return false;
+        }
+    });
+
+    $('#form input,selector').on('keyup blur', function () {
+        if ($('#form').valid()) {
+            $('#submit').attr('disabled', false);
+        } else {
+            $('#submit').attr('disabled', 'disabled');
+        }
+    });
+
+    //маска для номера телефона
+    $(document).ready(function(){
+        $('#phone').inputmask("+7 (999) 999-99-99");  //static mask
     });
 
     //Транслитерация имени и фамилии
@@ -104,16 +122,7 @@ $(document).ready(function () {
             return result;
         });
 
-       return tmpArr.join('');
+        return tmpArr.join('');
     }
-
-
-    //активность кнопки формы
-    $.validate({
-        modules : 'toggleDisabled',
-        disabledFormFilter : 'form',
-        showErrorDialogs : false
-    });
-
 });
 
